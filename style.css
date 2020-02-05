@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/* Basic styling */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  nav {
+    height: 80px;
+    background: #222;
+    padding: 5px 20px;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #4AAB00;
+    opacity: .7;
+  }
+  .logo a:hover {
+    text-decoration: none;
+  }
+  .menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+  }
+  .logo a,
+  .toggle a {
+  }
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .logo a span {
+      color: #4AAB00;
+  }
+  .button.secondary {
+    border-bottom: 1px #444 solid;
+  }
+  /* Mobile menu */
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .toggle {
+    order: 1;
+  }
+  .item.button {
+    order: 2;
+  }
+  .item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+    
+  }
+  .item.active {
+    display: block;
+    background: rgba(1,8,20,.81);
+    z-index: 999;
+  }
+  .button a {
+    display: none;
+  }
+  /* Tablet menu */
+  @media all and (min-width: 600px) {
+    .menu {
+      justify-content: center;
+    }
+    .logo {
+      flex: 1;
+    }
+    .toggle {
+      flex: 1;
+      text-align: right;
+    }
+    .item.button {
+      width: auto;
+      order: 1;
+      display: none;
+    }
+    .toggle {
+      order: 2;
+    }
+    .button.secondary {
+      border: 0;
+    }
+    .button a {
+      padding: 7.5px 15px;
+      background: #4AAB00;
+      border-radius: 4px;
+    }
+    .button.secondary a {
+      background: transparent;
+    }
+    .button a:hover {
+      text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+      background: #006d6d;
+      border-color: #005959;
+    }
+    .button.secondary a:hover {
+      color: #ddd;
+    }
+  }
+  /* Desktop menu */
+  @media all and (min-width: 900px) {
+    .item {
+      display: block;
+      width: auto;
+    }
+    .toggle {
+      display: none;
+    }
+    .logo {
+      order: 0;
+    }
+    .item {
+      order: 1;
+    }
+    .button {
+      order: 2;
+    }
+    .menu li {
+      padding: 15px 10px;
+    }
+    .menu li.button {
+      padding-right: 0;
+      display: block;  
+    }
+  }
+
+/* ----- HEADER ------ */
+header {
+    height: 100vh;
+    width: 100%;
+    background: url(./images/bg.png) no-repeat;
+    background-position: center;
+}
+
+header .text-header {
+  display: block;
+  position: absolute;
+  color:white;
+  left: 15%;
+  top: 40%;
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+.text-header h1 {
+  font-weight: bold;
+}
+
+header .text-header p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.green-button {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  width: 150px;
+  padding-top: 20px;
+  background-color: #4AAB00;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 10px;
+}
+.green-button:hover {
+  opacity: .5;
+  color: #fff;
+}
+
+/* ------- ABOUT ------ */
+.about {
+  height: 100%;
+}
+
+.about h1 {
+  color: #4AAB00;
+  font-weight: bolder;
+}
+
+
+/* ------- SPECIALITIES ------ */
+.our-specialities {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(./images/our_specialities_bg.png);
+}
+
+/* ------- SPECIALITIES ------ */
+.text-title {
+  width: 50%;
+  margin: auto;
+}
+
+  .our-specialities .text-title h1 {
+    color: #fff;
+    font-weight: bolder;
+  }
+
+  .our-specialities .text-title p {
+    color: #fff;
+  }
+
+  /* .specialities-cards {
+    margin: auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  } */
+
+  .our-specialities .card-text {
+    text-align: center;
+    font-size: 1rem;
+    color: #4AAB00!important;
+  }
+
+  .card-specialities {
+    width: 24%;
+  }
+
+  /* ------- MENU ------ */
+  .our-menu {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 109, 109,0.1);
+  }
+
+  .our-menu .text-title h1 {
+    color: #4AAB00;
+    font-weight: bolder;   
+  }
+
+  .our-menu .text-title p {
+    position: relative;
+  }
+
+  .our-menu .text-title p:after {
+    content: "";
+    width: 100px;
+    height: 3px;
+    background: #4AAB00;
+    position: absolute;
+    right: 40%;
+    top: 120%;
+  }
+
+  .test {
+    color: #4AAB00;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .test-2 {
+    position: relative;
+  }
+
+  .dish-col {
+    position: relative;
+  }
+
+  .menu-type-of-dish:after {
+    content: "";
+    width: 70px;
+    height: 2px;
+    background: #4AAB00;
+    position: absolute;
+    right: 80%;
+    top: 7%;
+  }
+
+
+  /*--- Reservation Form --*/
+  .reservation-form {
+  height: 100%;
+  background: #444;
+}
+
+.reservation-form .text-title h1 {
+  color: #4AAB00;
+  font-weight: bolder;   
+}
+
+.reservation-form .text-title p {
+  color: #fff;
+  font-weight: bolder;   
+}
+
+.reservation-form .green-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reservation-text {
+  color: #fff;
+  font-weight: bold;
+}
+
+footer {
+  background: rgba(1,8,20,.81);
+}
+
+footer img {
+  width: 10%;
+}
+
+.footer-brand-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer-brand-logo .green {
+  color: #4AAB00;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 0.7rem;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.middle {
+  align-items: center;
+}
+
+.middle p {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+
+.middle img {
+  width: 100px;
+  height: 100px;
+}
+
+.right .follow {
+  text-transform: uppercase;
+  color: #4AAB00;
+  font-weight: bold;
+}
+
+.right a {
+  border: 1px #fff solid;
+  margin: 0 3px;
+}
+
+.right a {
+  padding: 4px;
+  width: 4rem;
+}
+
+/* ----- Responsive -------*/
+
+@media screen and (max-width: 992px) {
+/* ----- About -------*/  
+  .about h1 {
+    text-align: center;
+  }
+
+  .about a {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+
+  .about img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .our-specialities .specialities-row {
+    flex-direction: column;
+  }
+
+  .our-specialities .card-specialities {
+    width: 100%;
+    margin: 3px;
+  }
+
+  .our-specialities input {
+    width: 100%;
+  }
+  .form-block {
+    flex-direction: column;
+  }
+  .reservation-date-time-guests {
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  /* ----- Header -------*/  
+  header .text-header {
+    display: block;
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+    top: 40%;
+  }
+  
+  .text-header h1 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  header .text-header p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  /* ------- About -------- */
+  .about a {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  }
+
+  @media screen and (max-width: 600px) {
+    .our-specialities {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 15, 15, 0.671);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: space-between;
+      align-items: center;
+    }
+    .left {
+      display: none;
+    }
+    .middle {
+
+    }
+
+    .right {
+      order: -1;
+      width: 100%;
+      text-align: center;
+  }
+  }
